@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<article class="featured-post" style="background-color: {{ page.color }}">
+    <div class="container">
+        <header class="row">
+            <div class="col-xs-9 col-sm-7 col-md-8">
+                <h2>{{ page.title }}</h2>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-sm-push-2 col-md-2 col-md-push-2">
+                {% include _share.html current=page %}
+            </div>
+            <div class="col-xs-12 col-sm-2 col-sm-pull-3 col-md-pull-2">
+                <span class="post-date">{{ page.date | date_to_string }}</span>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="post-body-wrapper">
+                    <div class="post-body group">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-5 img-buttons">
+                                <div class="post-img">
+                                    <a href="{{ site.url }}/images/{{ page.image }}"><img src="{{ site.url }}/images/{{ page.image_thumbnail }}" alt=""/></a>
+                                </div>
+                                {% if page.demo or page.code %}
+                                    <div class="post-buttons">
+                                        {% if page.demo %}
+                                            <a href="{{ page.demo }}" class="button blue">Demo</a>
+                                        {% endif %}
+                                        {% if page.code %}
+                                            <a href="{{ page.code }}" class="button turquoise">Code</a>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="post-content liquid-content">
+                                {{ content }}
+                            </div>
+                            <div class="comments">
+                                {% if page.comments %}
+                                    {% include _disqus.html %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

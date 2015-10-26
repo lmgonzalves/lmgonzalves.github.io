@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'icons';
+  src:url('../fonts/icons.eot?o4dxgs');
+  src:url('../fonts/icons.eot?o4dxgs#iefix') format('embedded-opentype'),
+  url('../fonts/icons.ttf?o4dxgs') format('truetype'),
+  url('../fonts/icons.woff?o4dxgs') format('woff'),
+  url('../fonts/icons.svg?o4dxgs#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angularjs:before {
+  content: "\e800";
+  color: #c4473a;
+}
+.icon-bootstrap:before {
+  content: "\e801";
+  color: #59407f;
+}
+.icon-css3:before {
+  content: "\e802";
+  color: #3d8fc6;
+}
+.icon-django:before {
+  content: "\e803";
+  color: #003A2B;
+}
+.icon-facebook:before {
+  content: "\e804";
+}
+.icon-github:before {
+  content: "\e805";
+}
+.icon-googleplus:before {
+  content: "\e806";
+}
+.icon-html5:before {
+  content: "\e807";
+  color: #e54d26;
+}
+.icon-javascript:before {
+  content: "\e808";
+  color: #f0db4f;
+}
+.icon-jquery:before {
+  content: "\e809";
+  color: #0769ad;
+}
+.icon-mail:before {
+  content: "\e80a";
+}
+.icon-nodejs:before {
+  content: "\e80b";
+  color: #83CD29;
+}
+.icon-rss:before {
+  content: "\e80c";
+}
+.icon-stackoverflow:before {
+  content: "\e80d";
+}
+.icon-twitter:before {
+  content: "\e80e";
+}

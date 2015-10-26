@@ -1,0 +1,4 @@
+<div class="share-icons" style="color: {{ include.current.color }}">
+    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ include.current.url }}" rel="nofollow" target="_blank" title="Share on Facebook"><i class="icon-facebook"></i></a>
+    <a href="https://twitter.com/intent/tweet?text={{ include.current.title | remove: '<span>' | remove: '</span>' }}&url={{ site.url }}{{ include.current.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="icon-twitter"></i></a>
+</div>

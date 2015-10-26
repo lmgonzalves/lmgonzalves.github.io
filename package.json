@@ -1,0 +1,22 @@
+{
+  "name": "lmgonzalves",
+  "version": "0.0.1",
+  "description": "lmgonzalves personal blog",
+  "main": "gulpfile.js",
+  "author": "lmgonzalves",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-sass": "^0.7.3",
+    "browser-sync": "^1.3.7",
+    "gulp-autoprefixer": "1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lmgonzalves/lmgonzalves.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lmgonzalves/lmgonzalves.github.io/issues"
+  },
+  "homepage": "https://github.com/lmgonzalves/lmgonzalves.github.io"
+}

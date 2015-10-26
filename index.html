@@ -1,0 +1,133 @@
+---
+layout: default
+title: lmgonzalves
+---
+
+{% if paginator.previous_page %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="posts-grid">
+                    {% for post in paginator.posts %}
+                    <a href="{{ post.url }}" class="post">
+                        <h2>{{ post.title }}</h2>
+                        <div class="post-excerpt">
+                            <img src="{{ site.url }}/images/{{ post.image_thumbnail }}" alt=""/>
+                            <div style="background-color: {{ post.color }}">
+                                <span class="post-date">{{ post.date | date_to_string }}</span>
+                                <div class="excerpt">
+                                    {{ post.excerpt }}
+                                    <div class="excerpt-gradient" style="background: linear-gradient(transparent, {{ post.color }}); background: -webkit-linear-gradient(transparent, {{ post.color }});"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+
+                <div class="pagination">
+                    {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}"><span>&laquo;</span> Prev</a>
+                    {% else %}
+                    <span><span>&laquo;</span> Prev</span>
+                    {% endif %}
+
+                    {% for page in (1..paginator.total_pages) %}
+                    {% if page == paginator.page %}
+                    <span class="current">{{ page }}</span>
+                    {% elsif page == 1 %}
+                    <a href="/">{{ page }}</a>
+                    {% else %}
+                    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next <span>&raquo;</span></a>
+                    {% else %}
+                    <span>Next <span>&raquo;</span></span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    {% for post in paginator.posts limit:1 %}
+        <article class="featured-post" style="background-color: {{ post.color }}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-9 col-sm-7 col-md-8">
+                        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-sm-push-2 col-md-2 col-md-push-2">
+                        {% include _share.html current=post %}
+                    </div>
+                    <div class="col-xs-12 col-sm-2 col-sm-pull-3 col-md-pull-2">
+                        <span class="post-date">{{ post.date | date_to_string }}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="post-body-wrapper">
+                            <div class="post-body group">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-4 post-img">
+                                        <a href="{{ post.url }}"><img src="{{ site.url }}/images/{{ post.image_thumbnail }}" alt=""/></a>
+                                    </div>
+                                    <div class="col-xs-12 col-md-8 post-content">
+                                        <div class="featured-excerpt {% if post.demo or post.download %}post-with-buttons{% endif %}">
+                                            {{ post.excerpt }}
+                                        </div>
+                                        <div class="read-more"><a href="{{ post.url }}">+</a></div>
+                                        {% if post.demo or post.code %}
+                                            <div class="post-buttons">
+                                                {% if post.demo %}
+                                                    <a href="{{ post.demo }}" class="button blue">Demo</a>
+                                                {% endif %}
+                                                {% if post.code %}
+                                                    <a href="{{ post.code }}" class="button turquoise">Code</a>
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+    {% if paginator.posts.size > 1 %}
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="posts-grid">
+                        {% for post in paginator.posts offset:1 %}
+                        <a href="{{ post.url }}" class="post">
+                            <h2>{{ post.title }}</h2>
+                            <div class="post-excerpt">
+                                <img src="{{ site.url }}/images/{{ post.image_thumbnail }}" alt=""/>
+                                <div style="background-color: {{ post.color }}">
+                                    <span class="post-date">{{ post.date | date_to_string }}</span>
+                                    <div class="excerpt">
+                                        {{ post.excerpt }}
+                                        <div class="excerpt-gradient" style="background: linear-gradient(transparent, {{ post.color }}); background: -webkit-linear-gradient(transparent, {{ post.color }});"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+
+                    {% if paginator.total_pages > 1 %}
+                        <div class="load-more-wrapper">
+                            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button turquoise">More</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endif %}
+

@@ -1,0 +1,33 @@
+.pagination{
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 18px;
+  cursor: default;
+  > span, a{
+    display: inline-block;
+    margin: 1px 1px 10px;
+    padding: 5px 15px;
+    border-radius: 2px;
+    white-space: nowrap;
+    span{
+      position: relative;
+      top: -1px;
+      margin: 0 3px;
+    }
+  }
+  > span{
+    background: #ecf0f1;
+    &.current{
+      background: #7f8c8d;
+      color: #fff;
+    }
+  }
+  a{
+    background: #1abc9c;
+    color: #fff;
+    transition: 0.3s;
+    &:hover{
+      background: #16a085;
+    }
+  }
+}

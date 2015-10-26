@@ -1,0 +1,209 @@
+.site-name{
+  display: block;
+  font-size: 30px;
+  margin: 10px 0 0 30px;
+}
+
+.about{
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  padding-left: 60px;
+  margin: 0 0 10px 30px;
+  cursor: pointer;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #89909A;
+    transition: 0.3s;
+  }
+  &:after{
+    content: "+";
+    transition: 0.3s;
+  }
+  &.open{
+    &:after{
+      content: "-";
+    }
+    &:hover{
+      &:before{
+        background-color: #df5052;
+      }
+      &:after{
+        color: #df5052;
+      }
+    }
+  }
+  &:hover{
+    &:before{
+      background-color: #3498DB;
+    }
+    &:after{
+      color: #3498DB;
+    }
+  }
+}
+
+.social-icons-wrapper {
+  width: 100%;
+  .social-icons {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: default;
+    a {
+      position: relative;
+      display: inline-block;
+      color: #737C88;
+      font-size: 13px;
+      margin: 2px;
+      padding: 7px 8px 6px;
+      border-radius: 100%;
+      border: 1px solid #737C88;
+      transition: 0.3s box-shadow, 0.3s color, 0.3s border;
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        z-index: -2;
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        z-index: -1;
+        box-shadow: inset 0 0 0 20px #f5f5f5;
+        transition: 0.5s;
+      }
+      &:hover {
+        color: #f5f5f5;
+        border-color: transparent;
+        &:after {
+          box-shadow: inset 0 0 0 0 transparent;
+        }
+      }
+      &.stackoverflow:before {
+        box-shadow: inset 0 0 0 20px #F48024;
+      }
+      &.github:before {
+        box-shadow: inset 0 0 0 20px #333333;
+      }
+      &.facebook:before {
+        box-shadow: inset 0 0 0 20px #3b5998;
+      }
+      &.twitter:before {
+        box-shadow: inset 0 0 0 20px #00aced;
+      }
+      &.rss:before {
+        box-shadow: inset 0 0 0 20px #FF9133;
+      }
+      &.mail:before {
+        box-shadow: inset 0 0 0 20px #4183c4;
+      }
+    }
+  }
+}
+
+.about-info{
+  padding-bottom: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 1s;
+  &.open{
+    height: 321px;
+    padding-bottom: 20px;
+    opacity: 1;
+  }
+  .photo{
+    img{
+      margin-left: 30px;
+    }
+  }
+  .professional-info {
+    margin-top: 10px;
+    text-align: center;
+    .front-end-title, .back-end-title {
+      color: #5D6875;
+      span {
+        font-weight: 900;
+      }
+    }
+    .front-end-title {
+      position: relative;
+      font-size: 30px;
+      display: inline-block;
+      svg{
+        position: absolute;
+        top: 0;
+        right: -110px;
+        z-index: -1;
+      }
+    }
+    .back-end-title {
+      position: relative;
+      font-size: 28px;
+      display: inline-block;
+      margin-left: 0;
+      svg{
+        position: absolute;
+        bottom: 5px;
+        right: -120px;
+        z-index: -1;
+      }
+    }
+    .front-end-tools{
+      padding: 20px 0 15px;
+      i:first-child{
+        margin-left: 0;
+      }
+    }
+    .back-end-tools{
+      padding: 15px 0 20px;
+    }
+    i{
+      position: relative;
+      top: 0;
+      display: inline-block;
+      opacity: 0.7;
+      cursor: default;
+      font-size: 30px;
+      width: 30px;
+      margin: 0 5px;
+      text-align: center;
+      transition: top 0.2s, opacity 0.2s;
+      span{
+        position: absolute;
+        top: 100%;
+        left: -20px;
+        width: 70px;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        color: #1D2C3F;
+        opacity: 0;
+        transition: 0.2s;
+      }
+      &:hover{
+        top: -5px;
+        opacity: 1;
+        span{
+          padding-top: 10px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
