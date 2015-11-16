@@ -16,7 +16,7 @@ title: lmgonzalves
                             <div style="background-color: {{ post.color }}">
                                 <span class="post-date">{{ post.date | date_to_string }}</span>
                                 <div class="excerpt">
-                                    {{ post.excerpt }}
+                                    <p>{{ post.excerpt | strip_html }}</p>
                                     <div class="excerpt-gradient" style="background: linear-gradient(transparent, {{ post.color }}); background: -webkit-linear-gradient(transparent, {{ post.color }});"></div>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@ title: lmgonzalves
                                 <div style="background-color: {{ post.color }}">
                                     <span class="post-date">{{ post.date | date_to_string }}</span>
                                     <div class="excerpt">
-                                        {{ post.excerpt }}
+                                        <p>{{ post.excerpt | strip_html }}</p>
                                         <div class="excerpt-gradient" style="background: linear-gradient(transparent, {{ post.color }}); background: -webkit-linear-gradient(transparent, {{ post.color }});"></div>
                                     </div>
                                 </div>
