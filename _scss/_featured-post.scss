@@ -128,6 +128,12 @@
         &:last-child{
           padding-bottom: 10px;
         }
+        img{
+          width: auto;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
       p, li{
         line-height: 1.3;

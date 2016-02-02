@@ -111,8 +111,9 @@ The CSS animation should rotate the arrow with a good enough timing, and then re
 ### Conclusion
 
 And that is all! We've made a beautiful icon, let's see:
+<br/><br/>
 
 <p data-height="190" data-theme-id="0" data-slug-hash="vLaXNR" data-default-tab="result" data-user="lmgonzalves" class='codepen'>See the Pen <a href='http://codepen.io/lmgonzalves/pen/vLaXNR/'>Fun Refresh Icon</a> by lmgonzalves (<a href='http://codepen.io/lmgonzalves'>@lmgonzalves</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-Note that I've omitted some CSS and JavaScript code to focus only in relevant parts, but of course you can check the [full code on github](). I really hope you like this tutorial and find it useful. You can also [play with the code](http://codepen.io/lmgonzalves/pen/vLaXNR) yourself. Happy coding ;)
+Note that I've omitted some CSS and JavaScript code to focus only in relevant parts, but of course you can check the [full code on github](https://github.com/lmgonzalves/animated-refresh-icon). I really hope you like this tutorial and find it useful. You can also [play with the code](http://codepen.io/lmgonzalves/pen/vLaXNR) yourself. Happy coding ;)
