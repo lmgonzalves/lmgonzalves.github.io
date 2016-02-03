@@ -26,14 +26,14 @@ The first practical step to make these kind of animations is always the same: Dr
 In this particular case I'll be using only two paths. The first would be for the circular part, and the second for the arrow. This is the final code:
 
 ```html
-&lt;button class="refresh-icon"&gt;
-    &lt;svg viewBox="0 0 90 90"&gt;
-        &lt;path class="circle-path" d="M 45 45 m 0 -30 a 30 30 0 1 1 0 60 a 30 30 0 1 1 0 -60"&gt;&lt;/path&gt;
-    &lt;/svg&gt;
-    &lt;svg class="arrow-svg" viewBox="0 0 90 90"&gt;
-        &lt;path class="arrow-path" d="M 50 15 m -18 -18 l 18 18 l -18 18"&gt;&lt;/path&gt;
-    &lt;/svg&gt;
-&lt;/button&gt;
+<button class="refresh-icon">
+    <svg viewBox="0 0 90 90">
+        <path class="circle-path" d="M 45 45 m 0 -30 a 30 30 0 1 1 0 60 a 30 30 0 1 1 0 -60"></path>
+    </svg>
+    <svg class="arrow-svg" viewBox="0 0 90 90">
+        <path class="arrow-path" d="M 50 15 m -18 -18 l 18 18 l -18 18"></path>
+    </svg>
+</button>
 ```
 
 Note that I'm using differents `svg` for each `path`. That is because I'll be rotating the arrow with CSS, and I need it to make the rotation that I want. Also, Firefox 42 and below [do not support](http://caniuse.com/#search=transform) [`transform-origin` on SVG elements](https://bugzilla.mozilla.org/show_bug.cgi?id=923193).
