@@ -1,7 +1,6 @@
 name: lmgonzalves
 description: I am a front-end developer (HTML5, CSS3, SASS, Bootstrap, JavaScript, jQuery, AngularJS). And I also like to develop back-end APIs (NodeJS and Django).
 url: http://lmgonzalves.github.io
-markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 paginate: 9
